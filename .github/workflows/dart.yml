@@ -16,8 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: flutter pub get
     - name: Check Lints (dartanalyzer)
       run: dartanalyzer lib
     - name: flutter-cli
