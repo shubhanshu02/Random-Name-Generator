@@ -16,5 +16,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      
     - name: flutter-cli
       uses: steebchen/flutter@v1.1.0
+      
+    - name: install dependencies
+      uses: steebchen/flutter@v1.1.0
+      with:
+        args: pub get
+
+    - name: build apk
+      uses: steebchen/flutter@v1.1.0
+      with:
+        args: build apk --release
